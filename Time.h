@@ -1,5 +1,6 @@
 //
 // Created by Kaddijatou Baldeh on 4/20/22.
+// Purpose: Declare time class to use in setting time and computing differences in time
 // Teammates: Fransiskus Agapa, Lioul Woldemariam, Peter Zheng
 //
 #include <iostream>
@@ -19,14 +20,12 @@ private:
 public:
     Time();
     Time(int hour, int minute, int sec);
-    int getSecond() const;
-    int getHour() const;
+    int GetSecond() const;
+    int GetHour() const;
     string ToString()const;
     string ToJSON()const;
-    int getMinute() const;
-    int Calculate(const int& hours, int diffHour);
-
+    int GetMinute() const;
 };
-
+int Calculate(const Time& hourOne, const Time& hourTwo);
 
 #endif //TIME_TIME_H
